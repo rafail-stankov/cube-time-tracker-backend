@@ -3,14 +3,17 @@ import express, { Application, Request, Response } from 'express';
 const app: Application = express();
 const port: number = 3000;
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello');
 });
 
 app.post('/data-from-android', (req: Request, res: Response) => {
   console.log("HEY?");
-  console.log(req);
-  console.log(req.body);
   if (req.body) {
     console.log(req.body);
   }
