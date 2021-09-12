@@ -8,6 +8,9 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.post('/data-from-android', (req: Request, res: Response) => {
+  console.log("HEY?");
+  console.log(req);
+  console.log(req.body);
   if (req.body) {
     console.log(req.body);
   }
