@@ -14,11 +14,17 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.post('/data-from-android', (req: Request, res: Response) => {
-  console.log("HEY?");
-  if (req.body) {
-    console.log(req.body);
+  if (req.body && req.body.data) {
+    console.log(req.body.data);
+    const dataJSON = JSON.parse(req.body.data);
+    console.log(dataJSON.length);
+    for (let i = 0; i < dataJSON.length; i++) {
+      console.log(dataJSON[i]);
+    }
+    res.sendStatus(200);
+  } else {
+    res.sendStatus(400);
   }
-  res.sendStatus(200);
 });
 
 app.listen(process.env.PORT || port, () => {
