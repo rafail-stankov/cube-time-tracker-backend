@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import Session, { SessionSchema } from './session.model.ts';
+import Session, { SessionSchema } from './session.model';
 
 export interface UploadDocument extends mongoose.Document {
   name: string;
