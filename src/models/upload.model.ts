@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
 
-import Session, { SessionSchema } from './session.model';
+import Session, { SessionDocument, SessionSchema } from './session.model';
 
 export interface UploadDocument extends mongoose.Document {
   name: string;
-  sessions: [Session];
+  sessions: [SessionDocument];
   createdAt: Date;
   updatedAt: Date;
 }

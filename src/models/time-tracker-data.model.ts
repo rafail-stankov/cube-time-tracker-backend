@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 
-import Label, { LabelSchema } from './label.model';
+import Label, { LabelDocument, LabelSchema } from './label.model';
 
 export interface TimeTrackerDataDocument extends mongoose.Document {
   start: Date;
   end: Date;
-  label: Label;
+  label: LabelDocument;
   createdAt: Date;
   updatedAt: Date;
 }

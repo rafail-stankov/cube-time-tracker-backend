@@ -1,12 +1,12 @@
 import mongoose from 'mongoose';
 
-import TimeTrackerData, { TimeTrackerDataSchema } from './time-tracker-data.model';
+import TimeTrackerData, { TimeTrackerDataDocument, TimeTrackerDataSchema } from './time-tracker-data.model';
 
 export interface SessionDocument extends mongoose.Document {
   name: string;
   start: Date;
   end: Date;
-  timeTrackerData: [TimeTrackerData];
+  timeTrackerData: [TimeTrackerDataDocument];
   createdAt: Date;
   updatedAt: Date;
 }
