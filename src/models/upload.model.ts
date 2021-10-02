@@ -4,7 +4,7 @@ import Session, { SessionDocument, SessionSchema } from './session.model';
 
 export interface UploadDocument extends mongoose.Document {
   name: string;
-  sessions: [SessionDocument];
+  sessions: SessionDocument[];
   createdAt: Date;
   updatedAt: Date;
 }

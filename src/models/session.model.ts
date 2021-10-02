@@ -6,7 +6,7 @@ export interface SessionDocument extends mongoose.Document {
   name: string;
   start: Date;
   end: Date;
-  timeTrackerData: [TimeTrackerDataDocument];
+  timeTrackerData: TimeTrackerDataDocument[];
   createdAt: Date;
   updatedAt: Date;
 }

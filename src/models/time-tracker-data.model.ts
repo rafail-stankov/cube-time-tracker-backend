@@ -6,8 +6,8 @@ export interface TimeTrackerDataDocument extends mongoose.Document {
   start: Date;
   end: Date;
   label: LabelDocument;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 export const TimeTrackerDataSchema = new mongoose.Schema({
